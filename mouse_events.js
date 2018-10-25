@@ -3,13 +3,13 @@ imgCanvas.addEventListener("mousemove", (e) => {
         return;
     }
     let pos = getMousePos(imgCanvas, e);
-    drawNumber(pos.x, pos.y);
+    drawMain(pos.x, pos.y, true);
 });
 
 imgCanvas.addEventListener("mousedown", (e) => {
     isDraw = true;
     let pos = getMousePos(imgCanvas, e);
-    drawNumber(pos.x, pos.y);
+    drawMain(pos.x, pos.y);
 });
 
 imgCanvas.addEventListener("mouseup", (e) => {
