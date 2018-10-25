@@ -1,0 +1,10 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 200px;
+}
+
+#draw-canvas {
+    border: 5px solid black;
+}
