@@ -36,7 +36,7 @@ function drawDefault(x, y, dragging) {
 function reDraw() {
     imgCtx.clearRect(0, 0, imgCanvas.width, imgCanvas.height); // Clears the canvas
 
-    imgCtx.strokeStyle = "#666";
+    imgCtx.strokeStyle = "#000";
     imgCtx.lineJoin = "round";
     imgCtx.lineWidth = 5;
 
