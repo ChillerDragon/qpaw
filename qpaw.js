@@ -38,7 +38,7 @@ function reDraw() {
 
     imgCtx.strokeStyle = "#000";
     imgCtx.lineJoin = "round";
-    imgCtx.lineWidth = 5;
+    imgCtx.lineWidth = drawSize;
 
     for(var i=0; i < clickX.length; i++) {
       imgCtx.beginPath();
