@@ -18,14 +18,27 @@
     <title>qpaw</title>
 </head>
 <body>
-    <button onclick="drawSize=3">small</button>
-    <button onclick="drawSize=5">default</button>
-    <button onclick="drawSize=20">large</button>
-    <button onclick="drawSize=40">XXL</button>
-    <div class="center">
-        <canvas id="draw-canvas" width="520" height="520"></canvas>
-        <a id="download" download="qpaw_output.png"><button type="button" id="btn-download" onClick="download()">Download</button></a>
+    <div class="menu-grid">
+        <div class="menu-bar menu-top">
+            <button onclick="drawSize=3">small</button>
+            <button onclick="drawSize=5">default</button>
+            <button onclick="drawSize=20">large</button>
+            <button onclick="drawSize=40">XXL</button>
+        </div>
+        <div class="menu-bar menu-left">
+            <h1>menu left</h1>
+        </div>
+        <div class="menu-bar menu-right">
+            <h1>menu right</h1>
+        </div>
+        <div class="center">
+            <canvas id="draw-canvas" width="520" height="520"></canvas>
+            <a id="download" download="qpaw_output.png"><button type="button" id="btn-download" onClick="download()">Download</button></a>
+        </div>
     </div>
+
+
+
     <script src="global_vars.js"></script>
     <script src="mouse_events.js"></script>
     <script src="download.js"></script>
