@@ -21,39 +21,40 @@
     <div class="menu-grid">
         <div class="menu-bar menu-top">
             <div>
-                <button onClick="drawSize=3">small</button>
-                <button onClick="drawSize=5">default</button>
-                <button onClick="drawSize=20">large</button>
-                <button onClick="drawSize=40">XXL</button>
+                <button onclick="drawSize=3">small</button>
+                <button onclick="drawSize=5">default</button>
+                <button onclick="drawSize=20">large</button>
+                <button onclick="drawSize=40">XXL</button>
             </div>
             <div>
-                <button onClick="undo()">undo</button>
-                <button onClick="redo()">redo</button>
+                <button onclick="undo()">undo</button>
+                <button onclick="redo()">redo</button>
             </div>
         </div>
         <div class="menu-bar menu-left">
-            <button onClick="drawColorR=drawColorG=drawColorB=0">
+            <button onclick="updateColor('#000000')">
                 black
             </button>
-            <button onClick="drawColorR=drawColorG=drawColorB=44">
+            <button onclick="updateColor('#2C2C2C')">
                 dark grey
             </button>
-            <button onClick="drawColorR=drawColorG=drawColorB=77">
+            <button onclick="updateColor('#4D4D4D')">
                 grey
             </button>
-            <button onClick="drawColorR=drawColorG=drawColorB=120">
+            <button onclick="updateColor('#787878')">
                 light grey
             </button>
-            <button onClick="drawColorR=drawColorG=drawColorB=200">
+            <button onclick="updateColor('#C8C8C8')">
                 super light grey
             </button>
+            <input type="color" id="selected-color" value="#ff0000" onchange="javascript:updateColor(document.getElementById('selected-color').value);" />
         </div>
         <div class="menu-bar menu-right">
             <h1>menu right</h1>
         </div>
         <div class="center">
             <canvas id="draw-canvas" width="520" height="520"></canvas>
-            <a id="download" download="qpaw_output.png"><button type="button" id="btn-download" onClick="download()">Download</button></a>
+            <a id="download" download="qpaw_output.png"><button type="button" id="btn-download" onclick="download()">Download</button></a>
         </div>
     </div>
     <script src="global_vars.js"></script>

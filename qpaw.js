@@ -37,6 +37,10 @@ function redrawAllLines() {
     }
 }
 
+function updateColor(color) {
+    drawColorHex = color;
+}
+
 function undo() {
     // delete last line and save it in undo array
     const line = allLines.pop();

@@ -3,6 +3,7 @@ class Line {
         this.r = drawColorR;
         this.g = drawColorG;
         this.b = drawColorB;
+        this.hex = drawColorHex;
         this.size = drawSize;
         this.clickX = new Array();
         this.clickY = new Array();
@@ -13,7 +14,8 @@ class Line {
         // imgCtx.clearRect(0, 0, imgCanvas.width, imgCanvas.height); // Clears the canvas
 
         // imgCtx.strokeStyle = "#000";
-        imgCtx.strokeStyle = `rgb(${this.r},${this.g},${this.b})`;
+        // imgCtx.strokeStyle = `rgb(${this.r},${this.g},${this.b})`;
+        imgCtx.strokeStyle = this.hex;
         imgCtx.lineJoin = "round";
         imgCtx.lineWidth = this.size;
 
@@ -31,7 +33,7 @@ class Line {
     }
 
     drawDefault(x, y, dragging) {
-        // full credits for drawDefault and reDraw go to:
+        // original drawDefault and reDraw by williammalone:
         // http://www.williammalone.com/articles/create-html5-canvas-javascript-drawing-app/
         this.clickX.push(x);
         this.clickY.push(y);

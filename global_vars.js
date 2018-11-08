@@ -9,6 +9,7 @@ let drawSize = 5;
 let drawColorR = 0;
 let drawColorG = 0;
 let drawColorB = 0;
+let drawColorHex = "#000";
 
 // smooth drawing
 const allLines = new Array(); // holds the line objects
