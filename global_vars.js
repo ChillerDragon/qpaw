@@ -11,6 +11,5 @@ let drawColorG = 0;
 let drawColorB = 0;
 
 // smooth drawing
-const clickX = new Array();
-const clickY = new Array();
-const clickDrag = new Array();
+const allLines = new Array(); // holds the line objects
+
