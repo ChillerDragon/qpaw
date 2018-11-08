@@ -20,25 +20,31 @@
 <body>
     <div class="menu-grid">
         <div class="menu-bar menu-top">
-            <button onclick="drawSize=3">small</button>
-            <button onclick="drawSize=5">default</button>
-            <button onclick="drawSize=20">large</button>
-            <button onclick="drawSize=40">XXL</button>
+            <div>
+                <button onClick="drawSize=3">small</button>
+                <button onClick="drawSize=5">default</button>
+                <button onClick="drawSize=20">large</button>
+                <button onClick="drawSize=40">XXL</button>
+            </div>
+            <div>
+                <button onClick="undo()">undo</button>
+                <button onClick="redo()">redo</button>
+            </div>
         </div>
         <div class="menu-bar menu-left">
-            <button onclick="drawColorR=drawColorG=drawColorB=0">
+            <button onClick="drawColorR=drawColorG=drawColorB=0">
                 black
             </button>
-            <button onclick="drawColorR=drawColorG=drawColorB=44">
+            <button onClick="drawColorR=drawColorG=drawColorB=44">
                 dark grey
             </button>
-            <button onclick="drawColorR=drawColorG=drawColorB=77">
+            <button onClick="drawColorR=drawColorG=drawColorB=77">
                 grey
             </button>
-            <button onclick="drawColorR=drawColorG=drawColorB=120">
+            <button onClick="drawColorR=drawColorG=drawColorB=120">
                 light grey
             </button>
-            <button onclick="drawColorR=drawColorG=drawColorB=200">
+            <button onClick="drawColorR=drawColorG=drawColorB=200">
                 super light grey
             </button>
         </div>

@@ -26,3 +26,33 @@ function drawDotted(x, y) {
     imgCtx.fillStyle = "black";
     imgCtx.fillRect(x, y, 5, 5);
 }
+
+function redrawAllLines() {
+    // clear canvas
+    imgCtx.clearRect(0, 0, imgCanvas.width, imgCanvas.height);
+
+    // re draw all lines
+    for (let i = 0; i < allLines.length; i++) {
+        allLines[i].reDraw();
+    }
+}
+
+function undo() {
+    // delete last line and save it in undo array
+    const line = allLines.pop();
+    if (line) {
+        deletedLines.push(line);
+    }
+
+    redrawAllLines();
+}
+
+function redo() {
+    // restore last line from undo array
+    const line = deletedLines.pop();
+    if (line) {
+        allLines.push(line);
+    }
+
+    redrawAllLines();
+}
