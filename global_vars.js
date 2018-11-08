@@ -6,6 +6,9 @@ let isDraw = false;
 
 // configs
 let drawSize = 5;
+let drawColorR = 0;
+let drawColorG = 0;
+let drawColorB = 0;
 
 // smooth drawing
 const clickX = new Array();

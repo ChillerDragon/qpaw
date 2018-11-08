@@ -26,7 +26,21 @@
             <button onclick="drawSize=40">XXL</button>
         </div>
         <div class="menu-bar menu-left">
-            <h1>menu left</h1>
+            <button onclick="drawColorR=drawColorG=drawColorB=0">
+                black
+            </button>
+            <button onclick="drawColorR=drawColorG=drawColorB=44">
+                dark grey
+            </button>
+            <button onclick="drawColorR=drawColorG=drawColorB=77">
+                grey
+            </button>
+            <button onclick="drawColorR=drawColorG=drawColorB=120">
+                light grey
+            </button>
+            <button onclick="drawColorR=drawColorG=drawColorB=200">
+                super light grey
+            </button>
         </div>
         <div class="menu-bar menu-right">
             <h1>menu right</h1>
@@ -36,9 +50,6 @@
             <a id="download" download="qpaw_output.png"><button type="button" id="btn-download" onClick="download()">Download</button></a>
         </div>
     </div>
-
-
-
     <script src="global_vars.js"></script>
     <script src="mouse_events.js"></script>
     <script src="download.js"></script>
