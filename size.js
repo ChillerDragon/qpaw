@@ -5,7 +5,7 @@ domSizeSelectField.value = drawSize; // load default value
 
 // render size dropdown
 for (let i = 1; i < 200; i++) {
-  if (i == drawSize) { // load default value
+  if (i === drawSize) { // load default value
     domSizeSelect.innerHTML += `<option selected="selected" value="${i}">${i}</option>`;
   } else {
     domSizeSelect.innerHTML += `<option value="${i}">${i}</option>`;
@@ -21,27 +21,27 @@ function updateDrawSize(size) {
 }
 
 function updateSizeNf() {
-    // console.log("number field");
-    const newSize = domSizeSelectField.value;
-    updateDrawSize(newSize);
+  // console.log("number field");
+  const newSize = domSizeSelectField.value;
+  updateDrawSize(newSize);
 
-    // update the dropdown value
-    domSizeSelect.selectedIndex = newSize - 1;
+  // update the dropdown value
+  domSizeSelect.selectedIndex = newSize - 1;
 }
 
 function updateSizeDd() {
-    // console.log("drop down");
-    const newSize = Number.parseInt(domSizeSelect.value, 10);
-    updateDrawSize(newSize);
+  // console.log("drop down");
+  const newSize = Number.parseInt(domSizeSelect.value, 10);
+  updateDrawSize(newSize);
 
-    // update the number field value
-    domSizeSelectField.value = newSize;
+  // update the number field value
+  domSizeSelectField.value = newSize;
 }
 
 // additional listener to onblur
 // to also update the value if the field stays active but enter is pressed
 domSizeSelectField.addEventListener("keydown", (e) => {
-    if (e.key === "Enter") {
-        updateSizeNf();
-    }
+  if (e.key === "Enter") {
+    updateSizeNf();
+  }
 });

@@ -1,3 +1,4 @@
+/* eslint-disable prefer-const */
 const imgCanvas = document.getElementById('draw-canvas');
 const imgCtx = imgCanvas.getContext("2d");
 
@@ -12,5 +13,5 @@ let drawColorB = 0;
 let drawColorHex = "#000";
 
 // smooth drawing
-const allLines = new Array(); // holds the line objects
-const deletedLines = new Array(); // holds undo line objects
+const allLines = []; // holds the line objects
+const deletedLines = []; // holds undo line objects
