@@ -27,6 +27,10 @@
                 <button onclick="drawSize=40">XXL</button>
             </div>
             <div>
+                <input type="number" onblur="updateSizeNf();" id="draw-size-nf" min="1" max="200">
+                <select id="draw-size-dd" onchange="updateSizeDd();"></select>
+            </div>
+            <div>
                 <button onclick="undo()">undo</button>
                 <button onclick="redo()">redo</button>
             </div>
@@ -58,6 +62,7 @@
         </div>
     </div>
     <script src="global_vars.js"></script>
+    <script src="size.js"></script>
     <script src="line.js"></script>
     <script src="mouse_events.js"></script>
     <script src="download.js"></script>

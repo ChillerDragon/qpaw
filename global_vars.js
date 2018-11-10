@@ -14,4 +14,3 @@ let drawColorHex = "#000";
 // smooth drawing
 const allLines = new Array(); // holds the line objects
 const deletedLines = new Array(); // holds undo line objects
-
