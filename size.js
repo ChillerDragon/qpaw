@@ -5,19 +5,19 @@ domSizeSelectField.value = drawSize; // load default value
 
 // render size dropdown
 for (let i = 1; i < 200; i++) {
-    if (i == drawSize) { // load default value
-        domSizeSelect.innerHTML += `<option selected="selected" value="${i}">${i}</option>`;
-    } else {
-        domSizeSelect.innerHTML += `<option value="${i}">${i}</option>`;
-    }
+  if (i == drawSize) { // load default value
+    domSizeSelect.innerHTML += `<option selected="selected" value="${i}">${i}</option>`;
+  } else {
+    domSizeSelect.innerHTML += `<option value="${i}">${i}</option>`;
+  }
 }
 
 function updateDrawSize(size) {
-    if (!size) {
-        return; // guard for empty number field (empty str)
-    }
-    drawSize = size
-    // console.log("updated draw size to: " + drawSize);
+  if (!size) {
+    return; // guard for empty number field (empty str)
+  }
+  drawSize = size
+  // console.log("updated draw size to: " + drawSize);
 }
 
 function updateSizeNf() {
