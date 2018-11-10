@@ -15,7 +15,15 @@ module.exports = {
     "drawColorB": true,
     "drawColorHex": true,
     "allLines": true,
-    "deletedLines": true
+    "deletedLines": true,
+    "getMousePos": true,
+    "drawMain": true,
+    "drawNumber": true,
+    "drawDotted": true,
+    "redrawAllLines": true,
+    "updateColor": true,
+    "undo": true,
+    "redo": true
   },
   "env": {
     "browser": true

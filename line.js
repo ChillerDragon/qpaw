@@ -5,9 +5,9 @@ class Line {
     this.b = drawColorB;
     this.hex = drawColorHex;
     this.size = drawSize;
-    this.clickX = new Array();
-    this.clickY = new Array();
-    this.clickDrag = new Array();
+    this.clickX = [];
+    this.clickY = [];
+    this.clickDrag = [];
   }
 
   reDraw() {
@@ -16,10 +16,10 @@ class Line {
     // imgCtx.strokeStyle = "#000";
     // imgCtx.strokeStyle = `rgb(${this.r},${this.g},${this.b})`;
     imgCtx.strokeStyle = this.hex;
-    imgCtx.lineJoin = "round";
+    imgCtx.lineJoin = 'round';
     imgCtx.lineWidth = this.size;
 
-    for (var i = 0; i < this.clickX.length; i++) {
+    for (let i = 0; i < this.clickX.length; i++) {
       imgCtx.beginPath();
       if (this.clickDrag[i] && i) {
         imgCtx.moveTo(this.clickX[i - 1], this.clickY[i - 1]);

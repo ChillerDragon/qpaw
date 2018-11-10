@@ -1,6 +1,6 @@
 // size.js
-const domSizeSelect = document.getElementById("draw-size-dd");
-const domSizeSelectField = document.getElementById("draw-size-nf");
+const domSizeSelect = document.getElementById('draw-size-dd');
+const domSizeSelectField = document.getElementById('draw-size-nf');
 domSizeSelectField.value = drawSize; // load default value
 
 // render size dropdown
@@ -16,7 +16,7 @@ function updateDrawSize(size) {
   if (!size) {
     return; // guard for empty number field (empty str)
   }
-  drawSize = size
+  drawSize = size;
   // console.log("updated draw size to: " + drawSize);
 }
 
@@ -40,8 +40,8 @@ function updateSizeDd() {
 
 // additional listener to onblur
 // to also update the value if the field stays active but enter is pressed
-domSizeSelectField.addEventListener("keydown", (e) => {
-  if (e.key === "Enter") {
+domSizeSelectField.addEventListener('keydown', (e) => {
+  if (e.key === 'Enter') {
     updateSizeNf();
   }
 });

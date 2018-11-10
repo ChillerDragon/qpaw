@@ -1,73 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <!-- stuff -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+    <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+    <!-- qpaw -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="manifest" href="manifest.webmanifest">
+    <title>qpaw</title>
+  </head>
 
-<head>
-  <!-- stuff -->
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- favicon -->
-  <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-  <link rel="mask-icon" href="favicon/safari-pinned-tab.svg" color="#5bbad5">
-  <meta name="msapplication-TileColor" content="#da532c">
-  <meta name="theme-color" content="#ffffff">
-  <!-- qpaw -->
-  <link rel="stylesheet" href="style.css">
-  <link rel="manifest" href="manifest.webmanifest">
-  <title>qpaw</title>
-</head>
-
-<body>
-  <div class="menu-grid">
-    <div class="menu-bar menu-top">
-      <div>
-        <button onclick="drawSize=3">small</button>
-        <button onclick="drawSize=5">default</button>
-        <button onclick="drawSize=20">large</button>
-        <button onclick="drawSize=40">XXL</button>
+  <body>
+    <div class="menu-grid">
+      <div class="menu-bar menu-top">
+        <div>
+          <button onclick="drawSize=3">small</button>
+          <button onclick="drawSize=5">default</button>
+          <button onclick="drawSize=20">large</button>
+          <button onclick="drawSize=40">XXL</button>
+        </div>
+        <div>
+          <input type="number" onblur="updateSizeNf();" id="draw-size-nf" min="1" max="200">
+          <select id="draw-size-dd" onchange="updateSizeDd();"></select>
+        </div>
+        <div>
+          <button onclick="undo()">undo</button>
+          <button onclick="redo()">redo</button>
+        </div>
       </div>
-      <div>
-        <input type="number" onblur="updateSizeNf();" id="draw-size-nf" min="1" max="200">
-        <select id="draw-size-dd" onchange="updateSizeDd();"></select>
+      <div class="menu-bar menu-left">
+        <button onclick="updateColor('#000000')">
+          black
+        </button>
+        <button onclick="updateColor('#2C2C2C')">
+          dark grey
+        </button>
+        <button onclick="updateColor('#4D4D4D')">
+          grey
+        </button>
+        <button onclick="updateColor('#787878')">
+          light grey
+        </button>
+        <button onclick="updateColor('#C8C8C8')">
+          super light grey
+        </button>
+        <input type="color" id="selected-color" value="#ff0000" onchange="javascript:updateColor(document.getElementById('selected-color').value);" />
       </div>
-      <div>
-        <button onclick="undo()">undo</button>
-        <button onclick="redo()">redo</button>
+      <div class="menu-bar menu-right">
+        <h1>menu right</h1>
+      </div>
+      <div class="center">
+        <canvas id="draw-canvas" width="520" height="520"></canvas>
+        <a id="download" download="qpaw_output.png"><button type="button" id="btn-download" onclick="download()">Download</button></a>
       </div>
     </div>
-    <div class="menu-bar menu-left">
-      <button onclick="updateColor('#000000')">
-        black
-      </button>
-      <button onclick="updateColor('#2C2C2C')">
-        dark grey
-      </button>
-      <button onclick="updateColor('#4D4D4D')">
-        grey
-      </button>
-      <button onclick="updateColor('#787878')">
-        light grey
-      </button>
-      <button onclick="updateColor('#C8C8C8')">
-        super light grey
-      </button>
-      <input type="color" id="selected-color" value="#ff0000" onchange="javascript:updateColor(document.getElementById('selected-color').value);" />
-    </div>
-    <div class="menu-bar menu-right">
-      <h1>menu right</h1>
-    </div>
-    <div class="center">
-      <canvas id="draw-canvas" width="520" height="520"></canvas>
-      <a id="download" download="qpaw_output.png"><button type="button" id="btn-download" onclick="download()">Download</button></a>
-    </div>
-  </div>
-  <script src="global_vars.js"></script>
-  <script src="size.js"></script>
-  <script src="line.js"></script>
-  <script src="mouse_events.js"></script>
-  <script src="download.js"></script>
-  <script src="qpaw.js"></script>
-</body>
+    <script src="global_vars.js"></script>
+    <script src="size.js"></script>
+    <script src="line.js"></script>
+    <script src="mouse_events.js"></script>
+    <script src="download.js"></script>
+    <script src="qpaw.js"></script>
+  </body>
 </html>
