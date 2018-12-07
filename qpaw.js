@@ -13,6 +13,7 @@ function drawMain(x, y, dragging) {
     allLines.push(new Line());
   }
   allLines[allLines.length - 1].drawDefault(x, y, dragging)
+  deletedLines.length = 0;
 }
 
 function drawNumber(x, y) {
