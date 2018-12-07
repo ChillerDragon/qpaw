@@ -21,15 +21,3 @@ function download_js() {
   link.href = document.getElementById('draw-canvas').toDataURL();
   link.click();
 }
-
-const keymap = {};
-onkeydown = onkeyup = function (e) {
-  e = e || event; // to deal with IE
-  keymap[e.keyCode] = e.type == 'keydown';
-
-  if (keymap[16] && keymap[83]) {
-    download_js();
-    keymap[16] = false; // shift
-    keymap[83] = false; // s
-  }
-}
