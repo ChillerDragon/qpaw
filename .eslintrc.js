@@ -23,7 +23,8 @@ module.exports = {
     "redrawAllLines": true,
     "updateColor": true,
     "undo": true,
-    "redo": true
+    "redo": true,
+    "download_js": true
   },
   "env": {
     "browser": true
