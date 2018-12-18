@@ -1,6 +1,6 @@
 function shortcuts(e) {
   const evt = window.event ? event : e;
-  if (evt.ctrlKey) {
+  if (evt.ctrlKey || evt.metaKey) {
     if (evt.keyCode === 83) { // s
       e.preventDefault();
       download_js();
