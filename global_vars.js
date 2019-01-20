@@ -12,6 +12,7 @@ let drawColorR = 0;
 let drawColorG = 0;
 let drawColorB = 0;
 let drawColorHex = '#000';
+let drawMode = 'smooth';
 
 // smooth drawing
 const allLines = []; // holds the line objects

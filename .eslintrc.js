@@ -14,6 +14,7 @@ module.exports = {
     "drawColorG": true,
     "drawColorB": true,
     "drawColorHex": true,
+    "drawMode": true,
     "allLines": true,
     "deletedLines": true,
     "getMousePos": true,
@@ -24,6 +25,7 @@ module.exports = {
     "updateColor": true,
     "undo": true,
     "redo": true,
+    "newFile": true,
     "download_js": true
   },
   "env": {

@@ -40,4 +40,16 @@ class Line {
     this.clickDrag.push(dragging);
     this.reDraw();
   }
+
+  drawNumber(x, y) {
+    num += 1;
+    imgCtx.font = 'bold ' + this.size + 'px sans-serif';
+    imgCtx.textAlign = 'center';
+    imgCtx.fillText(num, x, y);
+  }
+
+  drawDotted(x, y) {
+    imgCtx.fillStyle = this.hex;
+    imgCtx.fillRect(x, y, this.size, this.size);
+  }
 }

@@ -12,20 +12,16 @@ function drawMain(x, y, dragging) {
   if (!dragging) {
     allLines.push(new Line());
   }
-  allLines[allLines.length - 1].drawDefault(x, y, dragging)
+  if (drawMode === 'smooth') {
+    allLines[allLines.length - 1].drawDefault(x, y, dragging);
+  } else if (drawMode === 'number') {
+    allLines[allLines.length - 1].drawNumber(x, y);
+  } else if (drawMode === 'dotted') {
+    allLines[allLines.length - 1].drawDotted(x, y);
+  } else {
+    alert('unsupproted draw mode: ' + drawMode);
+  }
   deletedLines.length = 0;
-}
-
-function drawNumber(x, y) {
-  num += 1;
-  imgCtx.font = 'bold 42px sans-serif';
-  imgCtx.textAlign = 'center';
-  imgCtx.fillText(num, x, y);
-}
-
-function drawDotted(x, y) {
-  imgCtx.fillStyle = 'black';
-  imgCtx.fillRect(x, y, 5, 5);
 }
 
 function redrawAllLines() {

@@ -56,7 +56,9 @@
         <input type="color" id="selected-color" value="#ff0000" onchange="javascript:updateColor(document.getElementById('selected-color').value);" />
       </div>
       <div class="menu-bar menu-right">
-        <h1>menu right</h1>
+          <button onclick="drawMode='smooth'">smooth</button>
+          <button onclick="drawMode='number'">number</button>
+          <button onclick="drawMode='dotted'">dotted</button>
       </div>
       <div class="center">
         <canvas id="draw-canvas" width="520" height="520"></canvas>
