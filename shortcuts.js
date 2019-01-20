@@ -8,6 +8,9 @@ function shortcuts(e) {
       redo();
     } else if (evt.keyCode === 90) { // z
       undo();
+    } else if (evt.keyCode == 78) { // n
+      e.preventDefault(); // seems to have no effect
+      newFile();
     }
   }
 }

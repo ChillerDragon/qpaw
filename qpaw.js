@@ -61,3 +61,14 @@ function redo() {
 
   redrawAllLines();
 }
+
+function newFile() {
+  const fileWidth = prompt('width: ');
+  const fileHeight = prompt('height: ');
+  if (isNaN(fileHeight) || isNaN(fileWidth)) {
+    alert('ERROR: width and height have to be numbers');
+    return;
+  }
+  imgCanvas.height = fileHeight;
+  imgCanvas.width = fileHeight;
+}
