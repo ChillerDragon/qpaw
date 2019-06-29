@@ -66,5 +66,5 @@ function newFile() {
     return;
   }
   imgCanvas.height = fileHeight;
-  imgCanvas.width = fileHeight;
+  imgCanvas.width = fileWidth;
 }
