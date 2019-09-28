@@ -70,7 +70,13 @@ function redo() {
 
 function newFile() {
   const fileWidth = prompt('width: ');
+  if (fileWidth === null) {
+    return;
+  }
   const fileHeight = prompt('height: ');
+  if (fileHeight === null) {
+    return;
+  }
   if (isNaN(fileHeight) || isNaN(fileWidth)) {
     alert('ERROR: width and height have to be numbers');
     return;
