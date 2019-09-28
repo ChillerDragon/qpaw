@@ -40,6 +40,9 @@ function updateColor(color) {
 }
 
 function updateColorHistory(color) {
+  if (usedColors[usedColors.length - 1] == color) {
+    return;
+  }
   usedColors.push(color);
   const htmlAttrs = `onclick="javascript:updateColor('${color}');" style="color: ${color}"`;
   domColors.insertAdjacentHTML('afterbegin', `<button ${htmlAttrs}>${color}</button>`);
