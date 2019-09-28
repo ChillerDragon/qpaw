@@ -1,7 +1,7 @@
 .menu-grid {
   display: grid;
   grid-template-rows: 100px 1fr;
-  grid-template-columns: 100px 1fr 100px;
+  grid-template-columns: 130px 1fr 130px;
 }
 
 .menu-bar {
@@ -24,6 +24,22 @@
 .menu-right {
   grid-row: 2 / 2;
   grid-column: 3 / 3;
+}
+
+.history-container {
+  margin-top: 5px;
+  max-height: 50vh;
+  min-height: 10px;
+  overflow: hidden;
+  border: 2px solid rgb(78, 78, 78);
+  border-radius: 5px;
+}
+
+.color-history {
+  /* TODO: scrollable */
+  display: block;
+  overflow: auto;
+  overflow-y: scroll;
 }
 
 .center {
