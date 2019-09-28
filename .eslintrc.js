@@ -7,6 +7,7 @@ module.exports = {
   "globals": {
     "imgCanvas": true,
     "imgCtx": true,
+    "domColors": true;
     "num": true,
     "isDraw": true,
     "drawSize": true,
@@ -17,6 +18,7 @@ module.exports = {
     "drawMode": true,
     "allLines": true,
     "deletedLines": true,
+    "usedColors": true,
     "getMousePos": true,
     "drawMain": true,
     "drawNumber": true,

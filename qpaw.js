@@ -36,6 +36,13 @@ function redrawAllLines() {
 
 function updateColor(color) {
   drawColorHex = color;
+  updateColorHistory(color);
+}
+
+function updateColorHistory(color) {
+  usedColors.push(color);
+  const htmlAttrs = `onclick="javascript:updateColor('${color}');" style="color: ${color}"`;
+  domColors.insertAdjacentHTML('afterbegin', `<button ${htmlAttrs}>${color}</button>`);
 }
 
 function undo() {

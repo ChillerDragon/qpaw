@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 const imgCanvas = document.getElementById('draw-canvas');
 const imgCtx = imgCanvas.getContext('2d');
+const domColors = document.getElementById('color-history');
 
 let num = 0;
 let isDraw = false;
@@ -17,3 +18,4 @@ let drawMode = 'smooth';
 // smooth drawing
 const allLines = []; // holds the line objects
 const deletedLines = []; // holds undo line objects
+const usedColors = []; // color history
