@@ -81,6 +81,9 @@ function newFile() {
     alert('ERROR: width and height have to be numbers');
     return;
   }
+  // clear undo buffer
+  deletedLines.length = 0;
+  allLines.length = 0;
   imgCanvas.height = fileHeight;
   imgCanvas.width = fileWidth;
 }
